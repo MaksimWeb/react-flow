@@ -2,18 +2,30 @@ import { Node } from "react-flow-renderer";
 
 export const initialNodes: Node[] = [
   {
+    id: "P",
+    data: { color: "" },
+    position: { x: -250, y: 25 },
+    data: { label: "Group 1" },
+    style: { backgroundColor: "rgba(255, 0, 0, 0.2)", width: 400, height: 300 },
+    draggable: true,
+  },
+  {
     id: "1",
     type: "colorChooser",
     data: { color: "#4FD1C5" },
-    position: { x: 250, y: 25 },
+    position: { x: 200, y: 55 },
     dragHandle: ".custom-drag-handle",
+    parentNode: "P",
+    extent: "parent",
   },
   {
     id: "2",
     type: "colorChooser",
     data: { color: "#F6E05E" },
-    position: { x: 100, y: 125 },
+    position: { x: 20, y: 225 },
     dragHandle: ".custom-drag-handle",
+    parentNode: "P",
+    extent: "parent",
   },
   {
     id: "3",
